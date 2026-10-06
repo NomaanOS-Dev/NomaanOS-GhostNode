@@ -1,3 +1,7 @@
+[![Ghost Engine](https://img.shields.io/badge/Ghost--Engine-ONLINE-brightgreen.svg?style=for-the-badge&logo=fastapi)](https://github.com/NomaanOS-Dev/NomaanOS-GhostNode)
+[![Swarm Network](https://img.shields.io/badge/Swarm-Synchronized-blue.svg?style=for-the-badge&logo=diagram-next)](https://github.com/NomaanOS-Dev/NomaanOS-GhostNode)
+[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/)
+
 # 🛰️ NomaanOS GhostNode — Air-Gapped Swarm Engine
 > **A decentralized, cryptographic peer-to-peer compute node designed to execute AI workloads across isolated, offline devices without internet connectivity.**
 
