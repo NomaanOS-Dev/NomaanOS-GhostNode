@@ -1,44 +1,32 @@
-[![Ghost Engine](https://img.shields.io/badge/Ghost--Engine-ONLINE-brightgreen.svg?style=for-the-badge&logo=fastapi)](https://github.com/NomaanOS-Dev/NomaanOS-GhostNode)
-[![Swarm Network](https://img.shields.io/badge/Swarm-Synchronized-blue.svg?style=for-the-badge&logo=diagram-next)](https://github.com/NomaanOS-Dev/NomaanOS-GhostNode)
-[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/)
+# NomaanOS GhostNode
 
-# 🛰️ NomaanOS GhostNode — Air-Gapped Swarm Engine
-> **A decentralized, cryptographic peer-to-peer compute node designed to execute AI workloads across isolated, offline devices without internet connectivity.**
+An experimental air-gapped peer coordination prototype for disconnected environments.
 
----
+## Status
 
-### 💡 What is GhostNode? (In 10 Seconds)
-Standard multi-agent systems rely on centralized cloud APIs like OpenAI or AWS. **GhostNode enables zero-trust device meshes**:
-- **Air-Gapped Operation**: Connects local machines over ad-hoc local sockets, Wi-Fi Direct, or local LANs without any internet access.
-- **Cryptographic Node Proofs**: Nodes verify payloads using keyed HMAC signatures before execution.
-- **Fault-Tolerant Engine**: If one peer node disconnects, tasks gracefully failover across surviving active nodes.
+This repository is a research prototype for local peer coordination and offline workload patterns. It is not a production-ready distributed system and should not be treated as one without independent validation.
 
----
+## What it does
 
-## 🏗️ Swarm Topology
+GhostNode explores:
 
-```text
-  [ Edge Node A ] <--- Keyed HMAC Verification ---> [ Edge Node B ]
-   (Local Socket)                                    (Local Socket)
-          \                                                /
-           \                                              /
-            +-----> [ Ghost Core Engine (`ghost_core.py`) ] <-----+
-                                   |
-                     Zero-Trust Local Workload
-                                   |
-                       [ Verified Output Log ]
+- local peer communication patterns
+- air-gapped or disconnected mesh experimentation
+- keyed verification patterns for trusted local coordination
+- resilience and partial connectivity behavior in constrained environments
 
-🚀 Quickstart & Testing
-​Run the node listener and client test suite locally:
-​1. Launch the Ghost Core Listener
+## Quick start
+
+```bash
+git clone https://github.com/NomaanOS-Dev/NomaanOS-GhostNode.git
+cd NomaanOS-GhostNode
+python3 -m venv .venv
+source .venv/bin/activate
 python ghost_core.py
+```
 
-2. Run the Verification Client
-​In a separate terminal or background session:
-python test_client.py
+## Important notes
 
-🛡️ Repository Structure
-FileDescription
-ghost_core.pyMain P2P daemon, socket handler, and payload verification engine.
-test_client.pyTest harness simulating peer handshakes and secure task dispatching.
-ghost_node.pyLightweight runtime configuration stub for edge deployments.
+- coordination behavior depends heavily on network topology and device assumptions
+- air-gapped peer models are experimental and not production-proven
+- real deployment requires environment-specific validation and protocol review
